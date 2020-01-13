@@ -1,5 +1,5 @@
-#µ¥½Úµã
-#Ó¦ÓÃÃû³Æ¼°ÑéÖ¤ÕËºÅ
+#å•èŠ‚ç‚¹
+#åº”ç”¨åç§°åŠéªŒè¯è´¦å·
 spring:
   application:
     name: eureka
@@ -13,14 +13,14 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
   server:
-    #¹Ø±Õ×ÔÎÒ±£»¤
+    #å…³é—­è‡ªæˆ‘ä¿æŠ¤
     enable-self-preservation: false
-    #ÇåÀí¼ä¸ôÊ±¼ä
+    #æ¸…ç†é—´éš”æ—¶é—´
     eviction-interval-timer-in-ms: 5000
 logging:
   level:
     root: info
----  #Èı¸öĞ±¸Ü±íÊ¾¶àÅäÖÃ,Ê¹Ö®ÉúĞ§¾ÍÒª¼ÓÃüÁîĞĞ²ÎÊı   VMoptions   -Dspring.profiles.active=7900
+---  #ä¸‰ä¸ªæ–œæ è¡¨ç¤ºå¤šé…ç½®,ä½¿ä¹‹ç”Ÿæ•ˆå°±è¦åŠ å‘½ä»¤è¡Œå‚æ•°   VMoptions   -Dspring.profiles.active=7900
 spring:
   profiles: 7900
 server:
