@@ -1,0 +1,38 @@
+##单节点
+##应用名称及验证账号
+#spring:
+#  application:
+#    name: eureka
+#
+#  security:
+#    user:
+#      name: root
+#      password: root
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#  server:
+#    #关闭自我保护
+#    enable-self-preservation: false
+#    #清理间隔时间
+#    eviction-interval-timer-in-ms: 5000
+#logging:
+#  level:
+#    root: info
+#---  #三个斜杠表示多配置,使之生效就要加命令行参数   VMoptions   -Dspring.profiles.active=7900
+#spring:
+#  profiles: 7901
+#server:
+#  port: 7901
+#eureka:
+#  instance:
+#    #    prefer-ip-address: true
+#    #    ip-address: 192.168.0.103
+#    hostname: eureka-7901
+#  client:
+#    service-url:
+##      defaultZone: http://root:root@eureka-7900:7900/eureka/
+#      defaultZone: http://root:root@localhost:7901/eureka/
+#
+#
