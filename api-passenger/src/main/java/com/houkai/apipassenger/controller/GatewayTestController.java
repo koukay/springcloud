@@ -21,7 +21,6 @@ import net.sf.json.JSONObject;
 @RestController
 @RequestMapping("/api-passenger-gateway-test")
 public class GatewayTestController {
-	private static final Logger log= LoggerFactory.getLogger(GatewayTestController.class);
 	@GetMapping("/hello")
 	public String helloWorld() {
 		log.info("api-passenger-hello");

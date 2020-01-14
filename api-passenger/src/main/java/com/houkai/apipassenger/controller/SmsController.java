@@ -26,7 +26,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/sms")
 @Slf4j
 public class SmsController {
-	private static final Logger log= LoggerFactory.getLogger(SmsController.class);
 	@Autowired
 	private ShortMsgService shortMsgService;
 	

@@ -32,6 +32,7 @@ eureka:
     hostname: eureka-7900
   client:
     service-url:
+#      defaultZone: http://root:root@eureka-7900:7900/eureka/
       defaultZone: http://root:root@localhost:7900/eureka/
 
 
