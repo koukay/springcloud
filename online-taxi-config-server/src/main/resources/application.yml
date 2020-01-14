@@ -1,0 +1,31 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/koukay/online-taxi-config-profile.git
+          username:
+          password:
+          #默认是秒,因为git慢
+          timeout: 15
+#注册中心
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://root:root@eureka-7900:7900/eureka/
+      defaultZone: http://root:root@localhost:7900/eureka/
+  instance:
+    hostname: localhost
+    instance-id: config-server
+management:
+  endpoints:
+    web:
+      exposure:
+        #yml加双引号,propertity不用加
+        exclude: "*"
+#服务端口
+server:
+  port: 6001
