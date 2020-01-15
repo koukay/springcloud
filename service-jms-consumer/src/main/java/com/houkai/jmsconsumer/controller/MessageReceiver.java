@@ -39,8 +39,6 @@ public class MessageReceiver {
         while (true) {
             TextMessage receive = (TextMessage) consumer.receive();
             System.out.println("message: "+receive.getText());
-            response.setContentType("text/json; charset=utf-8");
-            response.getWriter().write(receive.toString());
         }
 
     }
