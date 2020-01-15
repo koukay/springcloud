@@ -1,0 +1,37 @@
+
+
+#服务端口
+server:
+  port: 5002
+
+#应用名称及验证账号
+spring:
+  application:
+    name: service-jms-consumer
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+      max-connections: 100
+
+#Admin监控
+management:
+  endpoints:
+    web:
+      #将所有的端点对web暴露，因为有jmx和web的区别
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+#注册中心
+eureka:
+  client:
+    service-url:
+      #设置注册中心url
+      defaultZone: http://root:root@localhost:7900/eureka/
+  instance:
+    hostname: localhost
+    instance-id: service-jms-consumer
