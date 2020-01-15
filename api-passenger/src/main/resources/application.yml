@@ -43,7 +43,7 @@ feign:
       service-valuation:
 
         request-interceptors:
-          - com.houkai.apipassenger.feign.interceptor.MyBasicAuthRequestInterceptor
+          - com.houkai.passenger.feign.interceptor.MyBasicAuthRequestInterceptor
         connect-timeout: 5000
         read-timeout: 5000
         logger-level: basic
