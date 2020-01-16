@@ -32,3 +32,27 @@ CREATE TABLE `tbl_app_version_update` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `tbl_sms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `phone_number` varchar(255) DEFAULT NULL,
+  `sms_content` varchar(255) DEFAULT NULL,
+  `send_time` datetime DEFAULT NULL,
+  `operator` varchar(255) DEFAULT NULL,
+  `send_flag` int(11) DEFAULT NULL,
+  `send_number` int(11) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `tbl_sms_template` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `template_id` varchar(255) DEFAULT NULL,
+  `template_name` varchar(255) DEFAULT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `template_type` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
